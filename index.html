@@ -23,6 +23,16 @@
       touch-action: none;
     }
 
+    @keyframes colorSwitch {
+      0% {
+        color: rgb(255, 70, 70);
+      }
+
+      100% {
+        color: white;
+      }
+    }
+
     #play-button {
       position: absolute;
       top: 50%;
@@ -183,7 +193,9 @@
     <img src="/assets/zo_logo.gif" alt="Logo" style="width: 150px; cursor: pointer;" onclick="startExperience()">
     <p style="color: white; font-family: 'Press Start 2P'; font-size: 14px; margin-top: 20px;"><span
         style="color: yellow">Warning:-</span>
-      < DON'T CLICK>!
+      <span style="animation: colorSwitch 0.1s infinite alternate;">
+        &lt; DON'T CLICK &gt;!
+      </span>
     </p>
   </div>
 
@@ -211,8 +223,8 @@
       </button>
     </div>
 
-    <audio id="backgroundMusic" >
-      <source src="/assets/bg-music.mp3" type="audio/mpeg">
+    <audio id="backgroundMusic">
+      <source src="/assets/bgMusic.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
 
